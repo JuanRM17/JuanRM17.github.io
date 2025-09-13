@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plantilla HTML Básica</title>
+  <style>
+    /* Estilos simples para presentación */
+    body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; line-height: 1.6; margin: 0; padding: 0; }
+    header, footer { background:#0b5; color:#012; padding: 1rem; }
+    main { padding: 1rem; }
+    nav ul { list-style: none; padding: 0; display:flex; gap:1rem; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 900px; margin: 0 auto; }
+    .hero { padding: 2rem 1rem; background:#f3f3f3; border-radius:8px; }
+    form input, form button { padding: .5rem; margin-top:.5rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Mi sitio - HTML básico</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#about">Acerca</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero">
+        <h2>Bienvenido</h2>
+        <p>Esta es una plantilla HTML básica con estructura semántica: header, main, section y footer.</p>
+      </section>
+
+      <section id="about">
+        <h3>Acerca</h3>
+        <p>Usa esta plantilla como punto de partida para tus proyectos. Añade estilos, scripts y más secciones según necesites.</p>
+      </section>
+
+      <section id="contact">
+        <h3>Contacto</h3>
+        <form>
+          <label for="name">Nombre</label><br>
+          <input id="name" name="name" type="text" placeholder="Tu nombre"><br>
+          <label for="email">Email</label><br>
+          <input id="email" name="email" type="email" placeholder="tu@ejemplo.com"><br>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>&copy; 2025 - Tu nombre</small>
+    </div>
+  </footer>
+
+  <script>
+    // JavaScript mínimo: evitar envío real del formulario para demo
+    document.querySelector('form')?.addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Formulario enviado (demo).');
+    });
+  </script>
+</body>
+</html>
